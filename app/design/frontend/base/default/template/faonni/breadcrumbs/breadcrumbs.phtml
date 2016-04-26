@@ -1,6 +1,6 @@
 <?php
 /**
- * Faonni Group
+ * Faonni
  *  
  * NOTICE OF LICENSE
  *
