@@ -322,21 +322,93 @@
 	<!--
 	Store Credit page
 	-->		
-    <fox_customerbalance_info_index>
+    <enterprise_customerbalance_info_index>
 		<update handle="customer_account_handle" />
 		<reference name="breadcrumbs">
 			<action method="addCrumb"><crumbName>customerbalance_info</crumbName><crumbInfo><label>Store Credit</label></crumbInfo></action>
 		</reference>
-    </fox_customerbalance_info_index>
+    </enterprise_customerbalance_info_index>
 	<!--
 	Gift Card page
 	-->			
-    <fox_giftcardaccount_customer_index>
+    <enterprise_giftcardaccount_customer_index>
 		<update handle="customer_account_handle" />
 		<reference name="breadcrumbs">
 			<action method="addCrumb"><crumbName>giftcardaccount_customer</crumbName><crumbInfo><label>Gift Card</label></crumbInfo></action>
 		</reference>
-    </fox_giftcardaccount_customer_index>	
+    </enterprise_giftcardaccount_customer_index>
+	<!--
+	Gift Registry page
+	-->		
+    <enterprise_giftregistry_index_index>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry</crumbName><crumbInfo><label>Gift Registry</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_index_index>
+	<!--
+	Create Gift Registry page
+	-->		
+    <enterprise_giftregistry_index_addselect>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_addselect</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_index_addselect>
+	<!--
+	Create Gift Registry page
+	-->		
+    <enterprise_giftregistry_index_edit>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_edit</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_index_edit>
+	<!--
+	Gift Registry Items page
+	-->		
+    <enterprise_giftregistry_index_items>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_items</crumbName><crumbInfo><label>Gift Registry Items</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_index_items>
+	<!--
+	Gift Registry Share page
+	-->		
+    <enterprise_giftregistry_index_share>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_share</crumbName><crumbInfo><label>Share Gift Registry</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_index_share>
+	<!--
+	Gift Registry Search page
+	-->		
+    <enterprise_giftregistry_search_index>
+		<update handle="home_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_search_index>
+	<!--
+	Gift Registry Search Advanced page
+	-->		
+    <enterprise_giftregistry_search_advanced>
+		<update handle="home_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_search_advanced>	
+	<!--
+	Gift Registry Search result page
+	-->		
+    <enterprise_giftregistry_search_results>
+		<update handle="home_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_search_results>		
 	<!--
 	End updates
 	-->		
