@@ -80,7 +80,7 @@
 	<customer_account_create>
 		<update handle="home_handle" />
 		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>login</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
+			<action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
 		</reference>		
 	</customer_account_create>
 	<!--
@@ -408,7 +408,61 @@
 		<reference name="breadcrumbs">
 			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
 		</reference>
-    </enterprise_giftregistry_search_results>		
+    </enterprise_giftregistry_search_results>
+	<!--
+	Gift Registry Info page
+	-->		
+    <enterprise_giftregistry_view_index>
+		<update handle="home_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
+		</reference>
+    </enterprise_giftregistry_view_index>
+	<!--
+	Gift Registry Info page
+	-->		
+    <enterprise_giftregistry_index_view>
+		<update handle="home_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
+		</reference>	
+    </enterprise_giftregistry_index_view>	
+	<!--
+	Reward Points page
+	-->		
+    <enterprise_reward_customer_info>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>reward_info</crumbName><crumbInfo><label>Reward Points</label></crumbInfo></action>
+		</reference>	
+    </enterprise_reward_customer_info>
+	<!--
+	My Invitations page
+	-->		
+    <enterprise_invitation_index_index>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>My Invitations</label></crumbInfo></action>
+		</reference>	
+    </enterprise_invitation_index_index>	
+	<!--
+	Send Invitations page
+	-->		
+    <enterprise_invitation_index_send>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>Send Invitations</label></crumbInfo></action>
+		</reference>	
+    </enterprise_invitation_index_send>
+	<!--
+	Create an Account page
+	-->		
+    <enterprise_invitation_customer_account_create>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
+		</reference>	
+    </enterprise_invitation_customer_account_create>		
 	<!--
 	End updates
 	-->		
