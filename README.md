@@ -1,4 +1,4 @@
-# Magento2 Breadcrumbs
+# Magento Breadcrumbs
 Add breadcrumbs to any page.
 
 <img alt="Magento Breadcrumbs" src="https://karliuka.github.io/m1/breadcrumbs/login.png" style="width:100%"/>
