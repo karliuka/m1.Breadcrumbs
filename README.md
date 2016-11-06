@@ -8,3 +8,5 @@ Installation
 -------
 
 Download the plugin and copy the 'app' and 'skin' folder to the root of your Magento installation.
+
+* [Breadcrumbs from Magento2](https://github.com/karliuka/m2.Breadcrumbs)
