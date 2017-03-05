@@ -176,6 +176,15 @@
 		</reference>
 	</wishlist_index_index>
 	<!--
+	Layout for customer wishlist share page
+	-->		
+	<wishlist_index_share>
+		<update handle="customer_account_handle" />
+		<reference name="breadcrumbs">
+			<action method="addCrumb"><crumbName>account_wishlist_share</crumbName><crumbInfo><label>Wishlist Sharing</label></crumbInfo></action>
+		</reference>
+	</wishlist_index_share>		
+	<!--
 	Layout for customer newsletter index page
 	-->		
 	<newsletter_manage_index>
