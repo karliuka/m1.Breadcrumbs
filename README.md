@@ -31,7 +31,7 @@ OpenMage LTS 19.4.x
 
 ### Configuration
 
-*The module does not need configuration *.
+*The module does not need configuration*
 
 ### Frontend
 
