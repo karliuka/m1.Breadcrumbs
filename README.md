@@ -8,7 +8,7 @@ Magento CE(EE) 1.6.x, 1.7.x, 1.8.x, 1.9.x
 
 OpenMage LTS 19.4.x
 
-* [Breadcrumbs from Magento2](https://github.com/karliuka/m2.Breadcrumbs)
+[Breadcrumbs from Magento2](https://github.com/karliuka/m2.Breadcrumbs)
 
 #### Install via Composer
 
