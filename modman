@@ -1,4 +1,4 @@
-app/code/community/Faonni/Breadcrumbs/                             app/code/community/Faonni/Breadcrumbs/
-app/design/frontend/base/default/template/faonni/breadcrumbs/      app/design/frontend/base/default/template/faonni/breadcrumbs/
-app/design/frontend/base/default/layout/faonni/breadcrumbs.xml     app/design/frontend/base/default/layout/faonni/breadcrumbs.xml
-app/etc/modules/Faonni_Breadcrumbs.xml                             app/etc/modules/Faonni_Breadcrumbs.xml
+app/code/community/Faonni/Breadcrumbs/ app/code/community/Faonni/Breadcrumbs/
+app/design/frontend/base/default/template/faonni/breadcrumbs/ app/design/frontend/base/default/template/faonni/breadcrumbs/
+app/design/frontend/base/default/layout/faonni/breadcrumbs.xml app/design/frontend/base/default/layout/faonni/breadcrumbs.xml
+app/etc/modules/Faonni_Breadcrumbs.xml app/etc/modules/Faonni_Breadcrumbs.xml
