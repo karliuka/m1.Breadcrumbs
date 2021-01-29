@@ -9,6 +9,14 @@
         "email": "karliuka.vitalii@gmail.com"
     }],
     "require": {
-        "magento-hackathon/magento-composer-installer": "*"
+        "openmage/magento-lts": ">=19.4.0"
+    },
+    "extra": {
+        "map": [
+            ["app/etc/modules/Faonni_Breadcrumbs.xml", "app/etc/modules/Faonni_Breadcrumbs.xml"],
+            ["app/code/community/Faonni/Breadcrumbs/", "app/code/community/Faonni/Breadcrumbs/"],
+            ["app/design/frontend/base/default/template/faonni/breadcrumbs/", "app/design/frontend/base/default/template/faonni/breadcrumbs/"],
+            ["app/design/frontend/base/default/layout/faonni/breadcrumbs.xml", "app/design/frontend/base/default/layout/faonni/breadcrumbs.xml"]
+        ]
     }
 }
