@@ -1,6 +1,6 @@
 # Magento Breadcrumbs
 
-Add breadcrumbs to any page.
+Extension add breadcrumbs to pages in Magento that by default do not have breadcrumbs. 
 
 ## Compatibility
 
