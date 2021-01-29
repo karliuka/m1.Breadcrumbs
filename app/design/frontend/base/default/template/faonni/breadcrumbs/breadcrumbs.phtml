@@ -1,7 +1,7 @@
 <?php
 /**
  * Faonni
- *  
+ *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
@@ -14,30 +14,30 @@
  *
  * Do not edit or add to this file if you wish to upgrade module to newer
  * versions in the future.
- * 
+ *
  * @package     Faonni_Breadcrumbs
- * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
+ * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 ?>
 <?php if($crumbs && is_array($crumbs)): ?>
-	<div class="breadcrumbs">
-		<ul>
-			<?php foreach($crumbs as $_crumbName => $_crumbInfo): ?>
-				<li class="<?php echo $_crumbName ?>">
-				<?php if($_crumbInfo['link']): ?>
-					<?php $href = (false !== strpos($_crumbInfo['link'], '://')) ? $_crumbInfo['link'] : Mage::getUrl($_crumbInfo['link']) ?>
-					<a href="<?php echo $href ?>" title="<?php echo $this->escapeHtml($_crumbInfo['label']) ?>"><?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?></a>
-				<?php elseif($_crumbInfo['last']): ?>
-					<?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?>
-				<?php else : ?>
-					<?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?>
-				<?php endif ?>
-				<?php if(!$_crumbInfo['last']): ?>
-					<span>/ </span>
-				<?php endif ?>
-				</li>
-			<?php endforeach ?>
-		</ul>
-	</div>
+    <div class="breadcrumbs">
+        <ul>
+            <?php foreach($crumbs as $_crumbName => $_crumbInfo): ?>
+                <li class="<?php echo $_crumbName ?>">
+                <?php if($_crumbInfo['link']): ?>
+                    <?php $href = (false !== strpos($_crumbInfo['link'], '://')) ? $_crumbInfo['link'] : Mage::getUrl($_crumbInfo['link']) ?>
+                    <a href="<?php echo $href ?>" title="<?php echo $this->escapeHtml($_crumbInfo['label']) ?>"><?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?></a>
+                <?php elseif($_crumbInfo['last']): ?>
+                    <?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?>
+                <?php else : ?>
+                    <?php echo $this->escapeHtml($this->__($_crumbInfo['label'])) ?>
+                <?php endif ?>
+                <?php if(!$_crumbInfo['last']): ?>
+                    <span>/ </span>
+                <?php endif ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </div>
 <?php endif ?>

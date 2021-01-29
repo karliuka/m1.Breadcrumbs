@@ -2,7 +2,7 @@
 <!--
 /**
  * Faonni
- *  
+ *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
@@ -15,464 +15,464 @@
  *
  * Do not edit or add to this file if you wish to upgrade module to newer
  * versions in the future.
- * 
+ *
  * @package     Faonni_Breadcrumbs
  * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
 <layout version="0.1.0">
-	<!--
-	Default layout, loads most of the pages
-	-->
+    <!--
+    Default layout, loads most of the pages
+    -->
     <default>
-		<reference name="breadcrumbs">
-			<action method="setTemplate"><template>faonni/breadcrumbs/breadcrumbs.phtml</template></action>	
-		</reference>	
+        <reference name="breadcrumbs">
+            <action method="setTemplate"><template>faonni/breadcrumbs/breadcrumbs.phtml</template></action>	
+        </reference>
     </default>
-	<!--
-	Handle from all pages
-	-->		
-	<home_handle>
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>home</crumbName><crumbInfo><label>Home</label><link>/</link></crumbInfo></action>
-		</reference>
-	</home_handle>
-	<!--
-	Handle from all customer account pages
-	-->		
-	<customer_account_handle>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account</crumbName><crumbInfo><label>Account</label><link>customer/account</link></crumbInfo></action>	
-		</reference>
-	</customer_account_handle>	
-	<!--
-	Layout for customer login page
-	-->
-	<customer_account_login>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>login</crumbName><crumbInfo><label>Login</label></crumbInfo></action>
-		</reference>	
-	</customer_account_login>
-	<!--
-	Layout for customer forgot password page
-	-->
-	<customer_account_forgotpassword>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>forgotpassword</crumbName><crumbInfo><label>Forgot Password</label></crumbInfo></action>
-		</reference>	
-	</customer_account_forgotpassword>
-	<!--
-	Layout for customer reset password page
-	-->
-	<customer_account_changeforgotten>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>changeforgotten</crumbName><crumbInfo><label>Reset a Password</label></crumbInfo></action>
-		</reference>	
-	</customer_account_changeforgotten>	
-	<!--
-	Layout for new customer registration page
-	-->		
-	<customer_account_create>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
-		</reference>		
-	</customer_account_create>
-	<!--
-	Layout for customer log out page
-	-->
+    <!--
+    Handle from all pages
+    -->
+    <home_handle>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>home</crumbName><crumbInfo><label>Home</label><link>/</link></crumbInfo></action>
+        </reference>
+    </home_handle>
+    <!--
+    Handle from all customer account pages
+    -->
+    <customer_account_handle>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account</crumbName><crumbInfo><label>Account</label><link>customer/account</link></crumbInfo></action>	
+        </reference>
+    </customer_account_handle>	
+    <!--
+    Layout for customer login page
+    -->
+    <customer_account_login>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>login</crumbName><crumbInfo><label>Login</label></crumbInfo></action>
+        </reference>
+    </customer_account_login>
+    <!--
+    Layout for customer forgot password page
+    -->
+    <customer_account_forgotpassword>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>forgotpassword</crumbName><crumbInfo><label>Forgot Password</label></crumbInfo></action>
+        </reference>
+    </customer_account_forgotpassword>
+    <!--
+    Layout for customer reset password page
+    -->
+    <customer_account_changeforgotten>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>changeforgotten</crumbName><crumbInfo><label>Reset a Password</label></crumbInfo></action>
+        </reference>
+    </customer_account_changeforgotten>	
+    <!--
+    Layout for new customer registration page
+    -->
+    <customer_account_create>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
+        </reference>
+    </customer_account_create>
+    <!--
+    Layout for customer log out page
+    -->
     <customer_account_logoutsuccess>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>logout</crumbName><crumbInfo><label>Logout</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>logout</crumbName><crumbInfo><label>Logout</label></crumbInfo></action>
+        </reference>
     </customer_account_logoutsuccess>
-	<!--
-	Layout for customer account index page
-	-->	
-	<customer_account_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_dashboard</crumbName><crumbInfo><label>My Dashboard</label></crumbInfo></action>
-		</reference>
-	</customer_account_index>
-	<!--
-	Layout for customer account edit page
-	-->		
-	<customer_account_edit>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_edit</crumbName><crumbInfo><label>Account Information</label></crumbInfo></action>
-		</reference>
-	</customer_account_edit>
-	<!--
-	Layout for customer address book page
-	-->		
-	<customer_address_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_address</crumbName><crumbInfo><label>Address Book</label></crumbInfo></action>
-		</reference>
-	</customer_address_index>
-	<!--
-	Layout for customer address edit page
-	-->		
-	<customer_address_form>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_address</crumbName><crumbInfo><label>Address Book</label><link>customer/address</link></crumbInfo></action>
-			<action method="addCrumb"><crumbName>account_address_edit</crumbName><crumbInfo><label>Edit Address</label></crumbInfo></action>
-		</reference>
-	</customer_address_form>
-	<!--
-	Layout for customer order history page
-	-->		
-	<sales_order_history>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_orders</crumbName><crumbInfo><label>My Orders</label></crumbInfo></action>
-		</reference>
-	</sales_order_history>
-	<!--
-	Layout for customer order view page
-	-->		
-	<sales_order_view>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_orders</crumbName><crumbInfo><label>My Orders</label><link>sales/order/history</link></crumbInfo></action>
-			<action method="addCrumb"><crumbName>account_order</crumbName><crumbInfo><label>Info</label></crumbInfo></action>
-		</reference>
-	</sales_order_view>	
-	<!--
-	Layout for customer review index page
-	-->		
-	<review_customer_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_reviews</crumbName><crumbInfo><label>My Product Reviews</label></crumbInfo></action>
-		</reference>
-	</review_customer_index>
-	<!--
-	Layout for customer tag index page
-	-->		
-	<tag_customer_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_tag</crumbName><crumbInfo><label>My Tags</label></crumbInfo></action>
-		</reference>
-	</tag_customer_index>
-	<!--
-	Layout for customer wishlist index page
-	-->		
-	<wishlist_index_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_wishlist</crumbName><crumbInfo><label>My Wishlist</label></crumbInfo></action>
-		</reference>
-	</wishlist_index_index>
-	<!--
-	Layout for customer wishlist share page
-	-->		
-	<wishlist_index_share>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_wishlist_share</crumbName><crumbInfo><label>Wishlist Sharing</label></crumbInfo></action>
-		</reference>
-	</wishlist_index_share>		
-	<!--
-	Layout for customer newsletter index page
-	-->		
-	<newsletter_manage_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>account_newsletter</crumbName><crumbInfo><label>Newsletter Subscription</label></crumbInfo></action>
-		</reference>
-	</newsletter_manage_index>
-	<!--
-	Layout for customer downloadable products list page
-	-->		
-	<downloadable_customer_products>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>downloadable_customer_products</crumbName><crumbInfo><label>My Downloadable Products</label></crumbInfo></action>
-		</reference>
-	</downloadable_customer_products>
-	<!--
-	Layout for customer billing agreements page
-	-->			
-	<sales_billing_agreement_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">             
-			<action method="addCrumb"><crumbName>billing_agreements</crumbName><crumbInfo><label>Billing Agreements</label></crumbInfo></action>         
-		</reference>     
-	</sales_billing_agreement_index>  
-	<!--
-	Layout for customer recurring profiles page
-	-->			
-	<sales_recurring_profile_index>  
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">             
-			<action method="addCrumb"><crumbName>recurring_profiles</crumbName><crumbInfo><label>Recurring Profiles</label></crumbInfo></action>         
-		</reference>     
-	</sales_recurring_profile_index>
- 	<!--
-	Layout for customer applications page
-	-->			
-	<oauth_customer_token_index>  
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">             
-			<action method="addCrumb"><crumbName>oauth_customer_token</crumbName><crumbInfo><label>My Applications</label></crumbInfo></action>         
-		</reference>     
-	</oauth_customer_token_index> 		
-	<!--
-	Layout for sitemap category page
-	-->		
-	<catalog_seo_sitemap_category>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>sitemap</crumbName><crumbInfo><label>Site Map</label></crumbInfo></action>
-		</reference>
-	</catalog_seo_sitemap_category>
-	<!--
-	Layout for sitemap product page
-	-->		
-	<catalog_seo_sitemap_product>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>sitemap</crumbName><crumbInfo><label>Site Map</label></crumbInfo></action>
-		</reference>
-	</catalog_seo_sitemap_product>
-	<!--
-	Layout for catalogsearch term popular page
-	-->			
-	<catalogsearch_term_popular>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>term</crumbName><crumbInfo><label>Search Terms</label></crumbInfo></action>
-		</reference>
-	</catalogsearch_term_popular>	
-	<!--
-	Breadcrumbs from contacts page
-	-->		
-	<contacts_index_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>contacts</crumbName><crumbInfo><label>Contact Us</label></crumbInfo></action>
-		</reference>	
-	</contacts_index_index>
-	<!--
-	Breadcrumbs checkout cart page
-	-->	
-	<checkout_cart_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>cart</crumbName><crumbInfo><label>Shopping Cart</label></crumbInfo></action>
-		</reference>
-	</checkout_cart_index>
-	<!--
-	Breadcrumbs checkout onepage page
-	-->	
-	<checkout_onepage_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
-		</reference>
-	</checkout_onepage_index>
-	<!--
-	Breadcrumbs checkout onepage success page
-	-->	
-	<checkout_onepage_success>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
-		</reference>
-	</checkout_onepage_success>
-	<!--
-	Breadcrumbs checkout onepage failure page
-	-->	
-	<checkout_onepage_failure>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
-		</reference>
-	</checkout_onepage_failure>		
-	<!--
-	Breadcrumbs send friend page
-	-->		
-	<sendfriend_product_send>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>sendfriend</crumbName><crumbInfo><label>Email to a Friend</label></crumbInfo></action>
-		</reference>
-	</sendfriend_product_send>
-	<!--
-	Breadcrumbs rss page
-	-->		
+    <!--
+    Layout for customer account index page
+    -->
+    <customer_account_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_dashboard</crumbName><crumbInfo><label>My Dashboard</label></crumbInfo></action>
+        </reference>
+    </customer_account_index>
+    <!--
+    Layout for customer account edit page
+    -->
+    <customer_account_edit>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_edit</crumbName><crumbInfo><label>Account Information</label></crumbInfo></action>
+        </reference>
+    </customer_account_edit>
+    <!--
+    Layout for customer address book page
+    -->
+    <customer_address_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_address</crumbName><crumbInfo><label>Address Book</label></crumbInfo></action>
+        </reference>
+    </customer_address_index>
+    <!--
+    Layout for customer address edit page
+    -->
+    <customer_address_form>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_address</crumbName><crumbInfo><label>Address Book</label><link>customer/address</link></crumbInfo></action>
+            <action method="addCrumb"><crumbName>account_address_edit</crumbName><crumbInfo><label>Edit Address</label></crumbInfo></action>
+        </reference>
+    </customer_address_form>
+    <!--
+    Layout for customer order history page
+    -->
+    <sales_order_history>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_orders</crumbName><crumbInfo><label>My Orders</label></crumbInfo></action>
+        </reference>
+    </sales_order_history>
+    <!--
+    Layout for customer order view page
+    -->
+    <sales_order_view>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_orders</crumbName><crumbInfo><label>My Orders</label><link>sales/order/history</link></crumbInfo></action>
+            <action method="addCrumb"><crumbName>account_order</crumbName><crumbInfo><label>Info</label></crumbInfo></action>
+        </reference>
+    </sales_order_view>	
+    <!--
+    Layout for customer review index page
+    -->
+    <review_customer_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_reviews</crumbName><crumbInfo><label>My Product Reviews</label></crumbInfo></action>
+        </reference>
+    </review_customer_index>
+    <!--
+    Layout for customer tag index page
+    -->
+    <tag_customer_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_tag</crumbName><crumbInfo><label>My Tags</label></crumbInfo></action>
+        </reference>
+    </tag_customer_index>
+    <!--
+    Layout for customer wishlist index page
+    -->
+    <wishlist_index_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_wishlist</crumbName><crumbInfo><label>My Wishlist</label></crumbInfo></action>
+        </reference>
+    </wishlist_index_index>
+    <!--
+    Layout for customer wishlist share page
+    -->
+    <wishlist_index_share>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_wishlist_share</crumbName><crumbInfo><label>Wishlist Sharing</label></crumbInfo></action>
+        </reference>
+    </wishlist_index_share>
+    <!--
+    Layout for customer newsletter index page
+    -->
+    <newsletter_manage_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>account_newsletter</crumbName><crumbInfo><label>Newsletter Subscription</label></crumbInfo></action>
+        </reference>
+    </newsletter_manage_index>
+    <!--
+    Layout for customer downloadable products list page
+    -->
+    <downloadable_customer_products>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>downloadable_customer_products</crumbName><crumbInfo><label>My Downloadable Products</label></crumbInfo></action>
+        </reference>
+    </downloadable_customer_products>
+    <!--
+    Layout for customer billing agreements page
+    -->
+    <sales_billing_agreement_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>billing_agreements</crumbName><crumbInfo><label>Billing Agreements</label></crumbInfo></action>         
+        </reference>
+    </sales_billing_agreement_index>
+    <!--
+    Layout for customer recurring profiles page
+    -->
+    <sales_recurring_profile_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>recurring_profiles</crumbName><crumbInfo><label>Recurring Profiles</label></crumbInfo></action>         
+        </reference>
+    </sales_recurring_profile_index>
+    <!--
+    Layout for customer applications page
+    -->
+    <oauth_customer_token_index>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>oauth_customer_token</crumbName><crumbInfo><label>My Applications</label></crumbInfo></action>         
+        </reference>
+    </oauth_customer_token_index>
+    <!--
+    Layout for sitemap category page
+    -->
+    <catalog_seo_sitemap_category>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>sitemap</crumbName><crumbInfo><label>Site Map</label></crumbInfo></action>
+        </reference>
+    </catalog_seo_sitemap_category>
+    <!--
+    Layout for sitemap product page
+    -->
+    <catalog_seo_sitemap_product>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>sitemap</crumbName><crumbInfo><label>Site Map</label></crumbInfo></action>
+        </reference>
+    </catalog_seo_sitemap_product>
+    <!--
+    Layout for catalogsearch term popular page
+    -->
+    <catalogsearch_term_popular>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>term</crumbName><crumbInfo><label>Search Terms</label></crumbInfo></action>
+        </reference>
+    </catalogsearch_term_popular>	
+    <!--
+    Breadcrumbs from contacts page
+    -->
+    <contacts_index_index>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>contacts</crumbName><crumbInfo><label>Contact Us</label></crumbInfo></action>
+        </reference>	
+    </contacts_index_index>
+    <!--
+    Breadcrumbs checkout cart page
+    -->
+    <checkout_cart_index>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>cart</crumbName><crumbInfo><label>Shopping Cart</label></crumbInfo></action>
+        </reference>
+    </checkout_cart_index>
+    <!--
+    Breadcrumbs checkout onepage page
+    -->
+    <checkout_onepage_index>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
+        </reference>
+    </checkout_onepage_index>
+    <!--
+    Breadcrumbs checkout onepage success page
+    -->
+    <checkout_onepage_success>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
+        </reference>
+    </checkout_onepage_success>
+    <!--
+    Breadcrumbs checkout onepage failure page
+    -->
+    <checkout_onepage_failure>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>checkout_onepage</crumbName><crumbInfo><label>Checkout</label></crumbInfo></action>
+        </reference>
+    </checkout_onepage_failure>
+    <!--
+    Breadcrumbs send friend page
+    -->
+    <sendfriend_product_send>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>sendfriend</crumbName><crumbInfo><label>Email to a Friend</label></crumbInfo></action>
+        </reference>
+    </sendfriend_product_send>
+    <!--
+    Breadcrumbs rss page
+    -->
     <rss_index_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>rss</crumbName><crumbInfo><label>RSS Feeds</label></crumbInfo></action>
-		</reference>
-    </rss_index_index>	
-	<!--
-	Breadcrumbs cms noroute page
-	-->		
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>rss</crumbName><crumbInfo><label>RSS Feeds</label></crumbInfo></action>
+        </reference>
+    </rss_index_index>
+    <!--
+    Breadcrumbs cms noroute page
+    -->
     <cms_index_noroute>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>error-404</crumbName><crumbInfo><label>Error</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>error-404</crumbName><crumbInfo><label>Error</label></crumbInfo></action>
+        </reference>
     </cms_index_noroute>
-	<!--
-	Store Credit page
-	-->		
+    <!--
+    Store Credit page
+    -->
     <enterprise_customerbalance_info_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>customerbalance_info</crumbName><crumbInfo><label>Store Credit</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>customerbalance_info</crumbName><crumbInfo><label>Store Credit</label></crumbInfo></action>
+        </reference>
     </enterprise_customerbalance_info_index>
-	<!--
-	Gift Card page
-	-->			
+    <!--
+    Gift Card page
+    -->
     <enterprise_giftcardaccount_customer_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftcardaccount_customer</crumbName><crumbInfo><label>Gift Card</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftcardaccount_customer</crumbName><crumbInfo><label>Gift Card</label></crumbInfo></action>
+        </reference>
     </enterprise_giftcardaccount_customer_index>
-	<!--
-	Gift Registry page
-	-->		
+    <!--
+    Gift Registry page
+    -->
     <enterprise_giftregistry_index_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry</crumbName><crumbInfo><label>Gift Registry</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry</crumbName><crumbInfo><label>Gift Registry</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_index_index>
-	<!--
-	Create Gift Registry page
-	-->		
+    <!--
+    Create Gift Registry page
+    -->
     <enterprise_giftregistry_index_addselect>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_addselect</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_addselect</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_index_addselect>
-	<!--
-	Create Gift Registry page
-	-->		
+    <!--
+    Create Gift Registry page
+    -->
     <enterprise_giftregistry_index_edit>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_edit</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_edit</crumbName><crumbInfo><label>Create Gift Registry</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_index_edit>
-	<!--
-	Gift Registry Items page
-	-->		
+    <!--
+    Gift Registry Items page
+    -->
     <enterprise_giftregistry_index_items>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_items</crumbName><crumbInfo><label>Gift Registry Items</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_items</crumbName><crumbInfo><label>Gift Registry Items</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_index_items>
-	<!--
-	Gift Registry Share page
-	-->		
+    <!--
+    Gift Registry Share page
+    -->
     <enterprise_giftregistry_index_share>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_share</crumbName><crumbInfo><label>Share Gift Registry</label></crumbInfo></action>
-		</reference>
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_share</crumbName><crumbInfo><label>Share Gift Registry</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_index_share>
-	<!--
-	Gift Registry Search page
-	-->		
+    <!--
+    Gift Registry Search page
+    -->
     <enterprise_giftregistry_search_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_search_index>
-	<!--
-	Gift Registry Search Advanced page
-	-->		
+    <!--
+    Gift Registry Search Advanced page
+    -->
     <enterprise_giftregistry_search_advanced>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_search_advanced>	
-	<!--
-	Gift Registry Search result page
-	-->		
+    <!--
+    Gift Registry Search result page
+    -->
     <enterprise_giftregistry_search_results>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_search</crumbName><crumbInfo><label>Gift Registry Search</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_search_results>
-	<!--
-	Gift Registry Info page
-	-->		
+    <!--
+    Gift Registry Info page
+    -->
     <enterprise_giftregistry_view_index>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
-		</reference>
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
+        </reference>
     </enterprise_giftregistry_view_index>
-	<!--
-	Gift Registry Info page
-	-->		
+    <!--
+    Gift Registry Info page
+    -->
     <enterprise_giftregistry_index_view>
-		<update handle="home_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
-		</reference>	
-    </enterprise_giftregistry_index_view>	
-	<!--
-	Reward Points page
-	-->		
+        <update handle="home_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>giftregistry_info</crumbName><crumbInfo><label>Gift Registry Info</label></crumbInfo></action>
+        </reference>	
+    </enterprise_giftregistry_index_view>
+    <!--
+    Reward Points page
+    -->
     <enterprise_reward_customer_info>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>reward_info</crumbName><crumbInfo><label>Reward Points</label></crumbInfo></action>
-		</reference>	
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>reward_info</crumbName><crumbInfo><label>Reward Points</label></crumbInfo></action>
+        </reference>	
     </enterprise_reward_customer_info>
-	<!--
-	My Invitations page
-	-->		
+    <!--
+    My Invitations page
+    -->
     <enterprise_invitation_index_index>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>My Invitations</label></crumbInfo></action>
-		</reference>	
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>My Invitations</label></crumbInfo></action>
+        </reference>	
     </enterprise_invitation_index_index>	
-	<!--
-	Send Invitations page
-	-->		
+    <!--
+    Send Invitations page
+    -->
     <enterprise_invitation_index_send>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>Send Invitations</label></crumbInfo></action>
-		</reference>	
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>invitation</crumbName><crumbInfo><label>Send Invitations</label></crumbInfo></action>
+        </reference>	
     </enterprise_invitation_index_send>
-	<!--
-	Create an Account page
-	-->		
+    <!--
+    Create an Account page
+    -->
     <enterprise_invitation_customer_account_create>
-		<update handle="customer_account_handle" />
-		<reference name="breadcrumbs">
-			<action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
-		</reference>	
+        <update handle="customer_account_handle"/>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>register</crumbName><crumbInfo><label>Create an Account</label></crumbInfo></action>
+        </reference>	
     </enterprise_invitation_customer_account_create>		
-	<!--
-	End updates
-	-->		
+    <!--
+    End updates
+    -->
 </layout>

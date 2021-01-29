@@ -1,7 +1,7 @@
 <?php
 /**
  * Faonni
- *  
+ *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
@@ -14,12 +14,12 @@
  *
  * Do not edit or add to this file if you wish to upgrade module to newer
  * versions in the future.
- * 
+ *
  * @package     Faonni_Breadcrumbs
- * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
+ * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 class Faonni_Breadcrumbs_Helper_Data 
-	extends Mage_Core_Helper_Abstract
+    extends Mage_Core_Helper_Abstract
 {
-} 
+}
